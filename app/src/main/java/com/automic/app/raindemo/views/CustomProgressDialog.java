@@ -1,10 +1,13 @@
 package com.automic.app.raindemo.views;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.automic.app.raindemo.R;
@@ -31,21 +34,23 @@ public class CustomProgressDialog extends ProgressDialog {
 //        setCanceledOnTouchOutside(true);
 //    }
 
+    public CustomProgressDialog(Context context, String content,int theme, int id) {
+        super(context,theme);
+        this.mContext = context;
+        this.mResid = id;
+        this.mLoadingTip = content;
+        this.setCanceledOnTouchOutside(false);
+
+    }
+
     public CustomProgressDialog(Context context, String content, int id) {
         super(context);
         this.mContext = context;
         this.mResid = id;
         this.mLoadingTip = content;
-        this.
-        setCanceledOnTouchOutside(false);
+        this.setCanceledOnTouchOutside(false);
 
     }
-
-    @Override
-    public void show() {
-        super.show();
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

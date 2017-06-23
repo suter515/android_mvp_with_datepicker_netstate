@@ -3,7 +3,9 @@ package com.automic.app.raindemo.businessone.view.activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.Display;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
@@ -134,20 +136,30 @@ public class BusinessOneActivity extends BaseMvpActivity<RainHistoryMvpView, Rai
     @Override
     public void showMessage(String message) {
         ToastUtils.show(this, message);
-        dialogLoading.dismiss();
-        dialogServerError.show();
-
+//        dialogLoading.dismiss();
+//        dialogServerError.show();
+        showDialog(dialogLoading,false);
+showDialog(dialogServerError,true);
     }
 
     @Override
     public void showLoading() {
         pb.setVisibility(View.GONE);
         dialogLoading.show();
+        // 动态设置自定义Dialog的显示内容的宽和高
+        WindowManager m = getWindowManager();
+        Display d = m.getDefaultDisplay();  //为获取屏幕宽、高
+        android.view.WindowManager.LayoutParams p = dialogLoading.getWindow().getAttributes();  //获取对话框当前的参数值
+        p.height = d.getHeight();   //高度设置为屏幕
+        p.width = d.getWidth();    //宽度设置为全屏
+        dialogLoading.getWindow().setAttributes(p);     //设置生效
+        //showDialog(dialogLoading,true);
     }
 
     @Override
     public void hideLoading() {
         pb.setVisibility(View.GONE);
-        dialogLoading.dismiss();
+       // dialogLoading.dismiss();
+        showDialog(dialogLoading,false);
     }
 }

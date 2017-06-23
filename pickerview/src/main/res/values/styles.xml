@@ -21,5 +21,13 @@
         <item name="android:windowEnterAnimation">@anim/pickerview_dialog_scale_in</item>
         <item name="android:windowExitAnimation">@anim/pickerview_dialog_scale_out</item>
     </style>
-
+    <!--加载进度对话框样式-->
+    <style name="Dialog_Fullscreen">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <!--<item name="android:windowIsTranslucent">false</item>&lt;!&ndash;半透明&ndash;&gt;-->
+        <!--<item name="android:windowBackground">@android:color/transparent</item>&lt;!&ndash;背景透明&ndash;&gt;-->
+        <!--<item name="android:backgroundDimEnabled">true</item>&lt;!&ndash;模糊&ndash;&gt;-->
+    </style>
 </resources>
