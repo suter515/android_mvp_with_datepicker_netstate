@@ -1,0 +1,48 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!--常用尺寸 不同手机不同base-->
+    <dimen name="base0.5dp">0.5dp</dimen>
+    <dimen name="base1dp">1dp</dimen>
+    <dimen name="base2dp">2dp</dimen>
+    <dimen name="base3dp">3dp</dimen>
+    <dimen name="base4dp">4dp</dimen>
+    <dimen name="base5dp">5dp</dimen>
+    <dimen name="base6dp">6dp</dimen>
+    <dimen name="base7dp">7dp</dimen>
+    <dimen name="base8dp">8dp</dimen>
+    <dimen name="base9dp">9dp</dimen>
+    <dimen name="base10dp">10dp</dimen>
+    <dimen name="base11dp">11dp</dimen>
+    <dimen name="base12dp">12dp</dimen>
+    <dimen name="base13dp">13dp</dimen>
+    <dimen name="base14dp">14dp</dimen>
+    <dimen name="base15dp">15dp</dimen>
+    <dimen name="base16dp">16dp</dimen>
+    <dimen name="base17dp">17dp</dimen>
+    <dimen name="base18dp">18dp</dimen>
+    <dimen name="base19dp">19dp</dimen>
+    <dimen name="base20dp">20dp</dimen>
+    <dimen name="base21dp">21dp</dimen>
+    <dimen name="base22dp">22dp</dimen>
+    <dimen name="base23dp">23dp</dimen>
+    <dimen name="base24dp">24dp</dimen>
+    <dimen name="base25dp">25dp</dimen>
+    <dimen name="base26dp">26dp</dimen>
+    <dimen name="base27dp">27dp</dimen>
+    <dimen name="base28dp">28dp</dimen>
+    <dimen name="base29dp">29dp</dimen>
+    <dimen name="base30dp">30dp</dimen>
+    <dimen name="base31dp">31dp</dimen>
+    <dimen name="base32dp">32dp</dimen>
+    <dimen name="base33dp">33dp</dimen>
+    <dimen name="base34dp">34dp</dimen>
+    <dimen name="base35dp">35dp</dimen>
+    <dimen name="base36dp">36dp</dimen>
+    <dimen name="base37dp">37dp</dimen>
+    <dimen name="base38dp">38dp</dimen>
+    <dimen name="base39dp">39dp</dimen>
+    <dimen name="base40dp">40dp</dimen>
+
+</resources>
