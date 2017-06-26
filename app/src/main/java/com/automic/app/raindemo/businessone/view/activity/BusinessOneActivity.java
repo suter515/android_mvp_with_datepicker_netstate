@@ -65,7 +65,6 @@ public class BusinessOneActivity extends BaseMvpActivity<RainHistoryMvpView, Rai
         public void onClick(View v) {
             dialogServerError.dismiss();
             ToastUtils.show(mContext, "重新加载");
-            dialogLoading.show();
             presenter.getRainHistoryDataByDate("10000444", dateNow.substring(0, 7));
         }
     };
@@ -89,7 +88,7 @@ public class BusinessOneActivity extends BaseMvpActivity<RainHistoryMvpView, Rai
                 dateNow = getTime(date);
                 ((TextView) v).setText(dateNow);
                 dateNow = dateNow.replace('年', '-');
-                dialogLoading.show();
+                //showDialog(dialogLoading,true);
                 presenter.getRainHistoryDataByDate("10000444", dateNow.substring(0, 7));
             }
         })
@@ -136,8 +135,6 @@ public class BusinessOneActivity extends BaseMvpActivity<RainHistoryMvpView, Rai
     @Override
     public void showMessage(String message) {
         ToastUtils.show(this, message);
-//        dialogLoading.dismiss();
-//        dialogServerError.show();
         showDialog(dialogLoading,false);
 showDialog(dialogServerError,true);
     }
@@ -145,21 +142,12 @@ showDialog(dialogServerError,true);
     @Override
     public void showLoading() {
         pb.setVisibility(View.GONE);
-        dialogLoading.show();
-        // 动态设置自定义Dialog的显示内容的宽和高
-        WindowManager m = getWindowManager();
-        Display d = m.getDefaultDisplay();  //为获取屏幕宽、高
-        android.view.WindowManager.LayoutParams p = dialogLoading.getWindow().getAttributes();  //获取对话框当前的参数值
-        p.height = d.getHeight();   //高度设置为屏幕
-        p.width = d.getWidth();    //宽度设置为全屏
-        dialogLoading.getWindow().setAttributes(p);     //设置生效
-        //showDialog(dialogLoading,true);
+        showDialog(dialogLoading,true);
     }
 
     @Override
     public void hideLoading() {
         pb.setVisibility(View.GONE);
-       // dialogLoading.dismiss();
         showDialog(dialogLoading,false);
     }
 }

@@ -47,6 +47,7 @@ public class RainHistoryPresenterImpl extends NewBasePresenter<RainHistoryMvpVie
 
     @Override
     public void getRainHistoryDataByDate(String stcd,String date) {
+        mvpView.showLoading();
         rainHistoryInteractor.requestRainHistoryData(stcd,date,RainHistoryPresenterImpl.this);
     }
 
